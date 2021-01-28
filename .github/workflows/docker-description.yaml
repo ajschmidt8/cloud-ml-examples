@@ -5,6 +5,7 @@ on:
     branches: main
     paths:
       - README.md
+      - .github/workflows/docker-description.yaml
 
 jobs:
   deploy:
@@ -16,4 +17,4 @@ jobs:
           username: gpucibot
           password: ${{ secrets.GPUCIBOT_DOCKERHUB_TOKEN }}
           repository: rapidsai/rapidsai-cloud-ml
-          readme-filepath: README.md
+          readme-filepath: ./README.md
